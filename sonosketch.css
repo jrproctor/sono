@@ -1,58 +1,34 @@
-
 body {
-	background-color: #ccc;
-
-}
-
+  background-color: #cccccc; }
 
 .toggleOn {
-	background-color: #ddd;
-	border-style: inset;
-	border-width: 2px;
-	width: 20px;
-	height: 20px;
-	margin: 4px;
-}
+  background-color: #dddddd;
+  border-style: inset;
+  border-width: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 4px; }
 
 .toggleOff {
-	background-color: #bbb ;
-	border-style: outset;
-	border-width: 2px;
-	width: 20px;
-	height: 20px;
-	margin: 4px;
-}
+  background-color: #bbbbbb;
+  border-style: outset;
+  border-width: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 4px; }
+
+.control-wide {
+  width: 100%; }
 
 #wf-control-panel {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 200px;
-	height: 600px;
-	background-color: #aaa;
-
-}
-
-#wf-colour-chooser {
-
-}
-
-
-#wf-circle-control {
-
-}
-
-
-#wf-line-control {
-
-}
+  height: 600px;
+  background-color: #aaaaaa; }
 
 #wf-canvas {
-	position: absolute;
-	top: 20px;
-	left: 240px;
-	width: 800px;
-	height: 600px;
-	background-color: #fff
+  height: 600px;
+  width: 800px;
+  background-color: white;
+  margin: 0 auto; }
 
-}
+#wf-canvas-wrapper {
+  text-align: center; }
