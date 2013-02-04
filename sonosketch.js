@@ -69,7 +69,7 @@ wireframe.config = {
 	},
 	
 	controls: {
-		colorChooser: '#wf-colour-chooser',
+		colourChooser: '#wf-colour-chooser',
 		circleControl: '#wf-circle-control',
 		lineControl: '#wf-line-control',
 	}
@@ -88,8 +88,7 @@ wireframe.setLineStyle = function() {
 	// lineJoin = type
 	// miterLimit = value
 	
-	
-	var picker = new jscolor.color(j$(wireframe.config.colorChooser), {}); 
+	var picker = new jscolor.color(this, {}); 
 	var color = picker.toString();
 	wireframe.context.strokeStyle = color;
 }
@@ -160,6 +159,15 @@ wireframe.LineCluster.prototype.draw = function() {
 }
 
 
+wireframe.clickHandler = function(e) {
+   var x = e.pageX - this.offsetLeft;
+   var y = e.pageY - this.offsetTop;
+
+   var newcircle = new wireframe.Circle(10, 10, x, y, 10);
+   newcircle.draw();
+}
+
+
 
 
 window.onload = function() {
@@ -186,5 +194,11 @@ window.onload = function() {
 	
 	var myline = new wireframe.LineCluster(300, 200, 700, 550, 20, 0.5);
 	myline.draw();
+
+    $(wireframe.config.canvasId).click(wireframe.clickHandler);
+    var colorChoose = $(wireframe.config.controls.colourChooser);
+    colorChoose.change(wireframe.setLineStyle);
+
+
 }
 	
